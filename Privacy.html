@@ -13,6 +13,11 @@
             --accent-color: #3498db;
         }
 
+        /* 解决锚点跳转偏移和动效 */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -48,6 +53,8 @@
             margin-top: 1.5em;
             border-left: 4px solid var(--accent-color);
             padding-left: 15px;
+            /* 关键：防止锚点跳转后标题紧贴浏览器顶部 */
+            scroll-margin-top: 80px; 
         }
 
         p, li {
